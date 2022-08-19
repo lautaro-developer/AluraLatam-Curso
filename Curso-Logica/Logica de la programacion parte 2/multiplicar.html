@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>tabla de multiplicar</h1>
+    <input type="text">
+    <br> <br>
+    <button>Enviar</button>
+    <script>
+    let input =  document.querySelector('input')
+    let btn = document.querySelector('button')
+
+    function imprimir(a) {
+        document.write(a)
+        document.write('<br> <br>')
+    }
+    imprimir('<br>')
+    // el usuario tiene que ingresar un valor y este debe imprimir la tabla de multiplicar
+
+    function tablaMulti(b) {
+        for (let tabla = 1; tabla <= 10; tabla++) {
+            document.write(b, " x " + tabla + ": " + (b * tabla + '<br>'));
+        }
+    }
+
+    function btn_imprimir() {
+        // la funcion espera el valor del input
+        imprimir(tablaMulti(input.value))
+    }
+    btn.onclick = btn_imprimir
+
+    // el usuario al ingresar otro valor que no se numero saltara una alerta
+
+
+    </script>
+</body>
+
+</html>

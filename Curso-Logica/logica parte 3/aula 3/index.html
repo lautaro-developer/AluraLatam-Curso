@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas width="300" height="300"></canvas>
+    <script>
+    let canvas = document.querySelector('canvas');
+    let pinsel = canvas.getContext('2d');
+
+    pinsel.fillStyle = 'red'
+    pinsel.fillRect(0, 0, 300, 300)
+
+    function capturar(e) {
+
+        // saber la posicion donde se iso click
+        let x = e.pageX - canvas.offsetLeft;
+        let y = e.pageY - canvas.offsetTop;
+
+        pinsel.fillStyle = '#000';
+        pinsel.beginPath();
+        pinsel.arc(x, y, 100, 0, 2 * 3.14);
+        pinsel.fill()
+    }
+    let color = ['blue', 'red', 'green']
+    canvas.onclick = capturar;
+
+    function ale() {
+    	let a = capturar.onclick
+    	if(color[0] == 'blue'){
+    		a.pinsel.fillStyle = 'blue'
+    	}
+    }
+
+    canvas.oncontextmenu = ale
+    </script>
+</body>
+
+</html>

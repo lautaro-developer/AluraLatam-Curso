@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>imc mejorado</h1>
+
+    <script>
+      function imprimir(a) {
+        document.write(a);
+        document.write("<br>");
+      }
+
+      let peso = Number(prompt("Cual es su peso?"));
+      let altura = Number(prompt("Cual es su altura?"));
+
+      function calcularPesoAltura(p, a) {
+        let i = Math.round(p / (a * a));
+        return i;
+      }
+      let calcular = calcularPesoAltura(peso, altura);
+      imprimir('El IMC de la persona es: ' + calcular);
+
+      if (calcular < 18.5) {
+        imprimir("Persona con desnutricion");
+      }
+      if (calcular >= 18.5) {
+        if (calcular <= 24.9) {
+          imprimir("Persona en normal");
+        }
+      }
+      if (calcular >= 25.0) {
+        if (calcular < 29.9) {
+          imprimir("Persona en camido a la obecidad");
+        }
+      }
+      if(calcular >= 30.0){
+       imprimir('Persona obesa')
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<canvas width="400" height="450"></canvas>
+
+<body>
+    <script>
+
+        
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle = 'red';
+    pincel.fillRect(0, 0, 400, 450)
+    pincel.fillStyle = '#fff';
+    pincel.beginPath();
+    pincel.moveTo(20, 20);
+
+    pincel.lineTo(20, 350);
+    pincel.lineTo(350, 350);
+    pincel.fill();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas width="500" height="500"></canvas>
+    <script>
+    let serie2009 = [6, 47, 41, 3, 3];
+    let serie2019 = [81, 9, 3, 3, 4];
+    let colores = ["blue", "green", "yellow", "red", "gray"];
+
+
+    let canvas = document.querySelector('canvas');
+    let pintar = canvas.getContext('2d');
+
+    function barra(x, y, serie, color, text) {
+        for (let x = 0; x < serie; x++) {
+            pintar.fillStyle = 'black';
+            pintar.strokeRect(0, 0, 66, 100)
+            pintar.fillStyle = color;
+            pintar.fillRect(x, y, 20, 100);
+
+            for (let a = 0; a < x; a++) {
+                pintar.fillStyle = 'black';
+                pintar.strokeRect(0, 20, 66, 100)
+                pintar.fillStyle = 'red';
+                pintar.fillRect(0, 20, 66, 100);
+            }
+        }
+    }
+    barra(0, 0, serie2009[1], colores[1], 'hola')
+    </script>
+</body>
+
+</html>

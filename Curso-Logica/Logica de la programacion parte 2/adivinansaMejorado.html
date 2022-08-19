@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>juego mejorado</h1>
+
+    <script>
+      let rondas = 60;
+
+      for (let x = 1; x <= rondas; x++) {
+        let numeroUser = Number(prompt("Ingrese un numero: "));
+        let numeroSystem = Math.round(Math.random() * 10);
+
+        if (numeroSystem === numeroUser) {
+          console.log(
+            "bien echo papu, el numero de ronda es: " +
+              x +
+              " y el numero acertado es: " +
+              numeroSystem
+          );
+          break;
+        } else {
+          console.log("XDDDDDDD " + numeroSystem);
+        }
+      }
+    </script>
+  </body>
+</html>

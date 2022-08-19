@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Recetas de Armando</h1>
+    <script>
+    //TAREA - evitar que se agregen repetidos
+    var ingredientes = [];
+    var cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
+
+    for (let x = 0; x < cantidad; x++) {
+        let existe = false;
+        let ingrediente = parseInt(prompt('Deme el ingrediente'))
+        for (let z = 0; z < ingredientes.length; z++) {
+            if (ingredientes[z] == ingrediente) {
+                existe = true
+                alert('repetido ' + ingrediente)
+                break;
+            }
+        }
+        if (existe == false) {
+            ingredientes.push(ingrediente)
+        }
+
+    }
+    console.log(ingredientes)
+    </script>
+</body>
+
+</html>

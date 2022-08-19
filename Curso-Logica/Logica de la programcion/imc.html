@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>imc de la persona</h1>
+    <script>
+      let pesoLau = prompt("Cual es su peso?");
+      let alturaLau = prompt("Cual es tu altur?");
+      function saltarLinea(a) {
+        document.write("<br>");
+      }
+      function imc(a, b) {
+        let i = Math.round(a / (b * b));
+        return i;
+      }
+      document.write("El imc de lautaro es de: ", imc(pesoLau, alturaLau));
+      let pesoAlturaLau = imc(pesoLau, alturaLau);
+
+      saltarLinea();
+      /*let pesoFacu = imc(60, 1.6);
+      pesoLau = imc(71, 1.72);
+
+      let resultado = (pesoFacu + pesoLau) / 2;
+      document.write("resultado con variable auxiliar: ", resultado);
+      saltarLinea();
+
+      document.write(
+        "resultado dentro de la funcion: ",
+        (pesoFacu + pesoLau) / 2
+      );*/
+
+      /* 
+      Mejorar el IMC
+      tabla de obecidad:
+
+      Desnutrido = < 18.5
+      Normal = 18.5 a 24.9
+      Sobrepeso = 25.0 a 29.9
+      Obecidad = 30.0 a 34.9
+       */
+
+      /*if (pesoAlturaLau < 18) {
+        // Desnutrido
+
+        saltarLinea();
+        document.write("Estas desnutrido");
+      } else if (pesoAlturaLau > 18 && pesoAlturaLau < 24) {
+        // normal
+
+        saltarLinea();
+        document.write("Estas en normal");
+      } else if (pesoAlturaLau > 25 && pesoAlturaLau < 30) {
+        // Sobrepeso
+
+        saltarLinea();
+        document.write("Estas con sobrepeso");
+      } else if (pesoAlturaLau > 30 && pesoAlturaLau < 35) {
+        // Obesidad
+
+        saltarLinea(); 
+        document.write("Estas obeso tio");
+      }*/
+
+      if (pesoAlturaLau < 18.5) {
+        document.write("Persona con desnutricion");
+      }
+      if (pesoAlturaLau > 18.5) {
+        if (pesoAlturaLau < 24.9) {
+          document.write("Persona con peso normal");
+        }
+      }
+      if (pesoAlturaLau >= 25.0) {
+        document.write("Persona con sobre peso");
+        if (pesoAlturaLau < 29.9) {
+          document.write("Persona en pre-obesidad");
+        }
+      }
+      if(pesoAlturaLau >= 30.0){
+        document.write('Anda al gimnacio puto tragon')
+      }
+    </script>
+  </body>
+</html>

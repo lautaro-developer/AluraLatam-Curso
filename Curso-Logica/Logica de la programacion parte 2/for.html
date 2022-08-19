@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function imprimir(a) {
+        document.write(a);
+        document.write("<br><br>");
+      }
+
+      let listaMiembros = Number(prompt("Mie"));
+      let totalEdad = 0;
+
+      for (let x = 1; x <= listaMiembros; x++) {
+        let edad = Number(prompt("Edad de la persona"));
+        totalEdad += edad;
+      }
+      let total = Math.round(totalEdad / listaMiembros);
+
+      imprimir(total);
+    </script>
+  </body>
+</html>

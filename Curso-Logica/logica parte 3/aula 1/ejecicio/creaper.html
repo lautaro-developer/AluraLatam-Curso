@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas width="400" height="400"></canvas>
+    <script>
+    let canvas = document.querySelector('canvas');
+    let pinsel = canvas.getContext('2d');
+
+    // centro
+    pinsel.fillStyle = 'green';
+    pinsel.fillRect(0, 0, 400, 350);
+
+    // ejo izquierdo
+    pinsel.fillStyle = 'black'
+    pinsel.fillRect(80, 50, 80, 80);
+
+    // ojo derecho
+    pinsel.fillRect(240, 50, 80, 80);
+
+    //nariz
+    pinsel.fillRect(160, 130, 80, 120);
+
+    // boca izquierda
+    pinsel.fillRect(110, 200, 50, 100)
+
+    // boca derecha
+    pinsel.fillRect(240, 200, 50, 100)
+    </script>
+</body>
+
+</html>

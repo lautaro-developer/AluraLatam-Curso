@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Gasolina o Alcohol?</h1>
+    <script>
+    // Gasolina
+    let tanque = 40;
+    let distancia = 480;
+    let contado = distancia / tanque;
+    let autoGasolina = document.write(`
+    Gasolina - El tanque es de ${tanque} y la distancia recorrida es ${distancia}KM, gasta ${Math.round(contado)} de gasolina en el recorrido`)
+
+    // Alcohol
+    distancia = 300;
+    contado = distancia / tanque;
+    let autoAlcohol = document.write(`
+    Alcohol - El tanque es de ${tanque} y la distancia recorrida es de ${distancia}KM, se gasta ${Math.round(contado)} (7,5 para ser precisos) de Alcohol en el recorrido`)
+    </script>
+</body>
+
+</html>

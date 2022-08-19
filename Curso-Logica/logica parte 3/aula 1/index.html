@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hola</h1>
+    <canvas width="600" height="400"></canvas>
+    <script>
+    let canvas = document.querySelector('canvas');
+    let pinsel = canvas.getContext('2d');
+
+    //fillRects - llenar rectangulo
+
+    // Agregar color de fondo
+    pinsel.fillStyle = '#fff';
+    // Filas (X) Columnas (Y)
+    pinsel.fillRect(0, 0, 600, 400);
+
+    pinsel.fillStyle = '#00ddff';
+    pinsel.fillRect(0, 0, 600, 130);
+
+    pinsel.fillStyle = '#00ddff';
+    pinsel.fillRect(0, 270, 600, 130);
+
+    pinsel.fillStyle = '#00ddff';
+    // un nuevo camino
+    pinsel.beginPath();
+
+    // mover al centro
+    pinsel.moveTo(300, 200);
+
+    // dibujar una linea
+    pinsel.lineTo(200, 400);
+    pinsel.lineTo(400, 400);
+
+    // llenar 
+    pinsel.fill();
+
+    // hacer el circulo
+    pinsel.fillStyle = 'yellow';
+
+    // comanezar un nuevo camino
+    pinsel.beginPath()
+
+    // dibujar circoferencias
+    // PI = posicion inicial
+    // RC = radio circulo
+    // AI = angulo inicial
+    // AF = angulo final
+    // pinsel.arc(PI, PI, RC, AT, AF)
+    pinsel.arc(300, 200, 20, 0, 2 * 3.14);
+    pinsel.fill()
+    </script>
+</body>
+
+</html>

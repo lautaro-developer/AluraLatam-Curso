@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Futbold</h1>
+
+    <script>
+      function saltarLinea(a) {
+        document.write("<br>");
+        document.write(a);
+      }
+
+      let victoria = Number(prompt("victorias de su equipo"));
+      let empate = Number(prompt("empates de su equipo"));
+
+      let puntosTotales = victoria * 3 + empate;
+      saltarLinea("los punetos totales son: " + puntosTotales);
+
+      if (puntosTotales > 28) {
+        saltarLinea("Mejor que el año pasado");
+      } else if (puntosTotales < 28) {
+        saltarLinea("Peor que el año pasado");
+      } else {
+        saltarLinea("Igual que el año pasado");
+      }
+    </script>
+  </body>
+</html>

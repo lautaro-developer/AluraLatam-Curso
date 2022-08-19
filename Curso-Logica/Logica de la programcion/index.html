@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>hola <br> papa</p>
+    <script type="text/javascript">
+    document.write('hola <br> papa');
+
+    document.write(20 + 60 * 2, '<br>')
+
+    document.write('20', '20')
+
+    document.write(2022 - 19)
+    document.write('<br>')
+    document.write('<br>')
+    document.write('<br>')
+
+    document.write('mi fecha de nacimiento es: ', 2022 - 19)
+    document.write('<br>')
+    
+    var edadCarlos = 2022 - 30;
+    document.write('la edad de carlos es: <br>', edadCarlos)
+    document.write('<br>')
+    
+    var edadActual = 2022;
+    console.log(edadActual)
+    document.write('Carlos tiene: ', (edadActual - 1992), ' años')
+    document.write('<br>')
+    document.write('Juan tiene: ', (edadActual - 1982), ' años')
+    document.write('<br>')
+    document.write('Carlos tiene: ', (edadActual - 2003), ' años')
+    document.write('<br>')
+
+    edadActual = 2020
+    console.log(edadActual)
+    document.write('matias tiene: ', (edadActual - 2009), ' años');
+    document.write('<br>')
+    document.write('<br>')
+
+    // Variables
+
+    var edadMujeres = (10+15+25)/3
+
+    /*Math.round() - sirve para rendondear numeros*/
+
+    document.write('El promedio de los estudiantes es: ', Math.round(edadMujeres))
+
+
+
+    let edad = (a, b, text)=>{
+     console.log(text, a/b)
+    }
+    console.log(edad(2020, 1990, 'La edad es: '))
+
+    document.write('<br>')
+    //trabajo
+    let mario = 25;
+    let maria = 40;
+    let franco = 60;
+
+    let redondear = (mario + maria + franco)/3
+    console.log(redondear)
+    let user1 = ' mario ';
+    let user2 = ' maria ';
+    let user3 = ' franco ';
+
+    document.write('El promedio de edad de', user1, user2, ' y ', user3, 'es: ', Math.round(redondear))
+
+    </script>
+</body>
+
+</html>
